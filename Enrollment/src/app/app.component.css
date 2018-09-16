@@ -1,0 +1,65 @@
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+body {
+    font-family: calibri;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    color: #585b5c;
+}
+
+.heading {
+    display: inline-block;
+    letter-spacing: 1px;
+    left: 25%;
+    width: 50%;
+    position: absolute;
+    text-align: center;
+    top: 11%;
+}
+
+.heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    padding: 15px 5px;
+    margin: 15px 0px 5px 0px;
+    border-bottom: 1px solid #239dad;
+    display: inline-block;
+}
+
+.heading p {
+    margin: 2px;
+}
+
+.form {
+    top: 25%;
+    position: absolute;
+    margin: 5px 0px;
+    padding: 30px 50px;
+    height: 90%;
+    width: 92%;
+    left: 3.3%
+}
+
+.form p {
+    top: 89%;
+    left: 26%;
+    position: absolute;
+}
+
+.form #submit {
+    background-color: #239dad;
+    border-width: 0px;
+    padding: 8px;
+    color: #ffffff;
+    margin-top: 4%
+}
+
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+.error{
+    color: red;
+}
