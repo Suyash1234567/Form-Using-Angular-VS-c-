@@ -1,21 +1,6 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: './app.component.html',
-//   styleUrls: ['./app.component.css']
-// })
-// export class AppComponent {
-//   title = 'Enrollment';
-// }
-
-
-
-
-
 
 import { Component, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';  //HttpClient used to connect Angular to DataBase.
 
 @Component({
   selector: 'app-root',

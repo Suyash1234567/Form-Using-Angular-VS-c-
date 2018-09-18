@@ -8,7 +8,8 @@
 
 <div class="form-group">
     <div class="row">
-      <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+      <div class="alert-danger" asp-validation-summary="ModelOnly"></div>  
+      <!-- validation summary tag helper (ModelOnly) is used to display validation messages that apply to your entire model -->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
         <label class="control-label"> State Name</label>
 
@@ -19,6 +20,7 @@
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -30,7 +32,7 @@
       </select>
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -42,19 +44,19 @@
       </select>
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label"> Ward Number</label>
 
       <select id="WardId" name="WardId"  [(ngModel)]="wardId"
-              class="form-control" (change)="GetWardNoDetails($event.target.value)">
+              class="form-control" >
         <option *ngFor="let ward of wards" value={{ward.wardNumberId}}>{{ward.wardNumber}}</option>
       </select>
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -62,7 +64,7 @@
       <input class="form-control"  value="" name="fullName" [(ngModel)]="fullName" placeholder="Full Name"  />
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -70,7 +72,7 @@
       <input class="form-control" #ref type="text" value="" name="fatherName" [(ngModel)]="fatherName" placeholder="Father Name"/>
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -78,7 +80,7 @@
       <input class="form-control" #ref type="date" value="" name="dob" [(ngModel)]="dob" placeholder="DOB"  />
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -86,7 +88,7 @@
       <input class="form-control" #ref type="text" value="" name="Email" [(ngModel)]="email" placeholder="Email"  />
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -94,7 +96,7 @@
       <input class="form-control" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone" placeholder="PhoneNumber"  />
     </div>
   </div>
-
+  <br>
 
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>

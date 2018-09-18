@@ -19,7 +19,7 @@ namespace VoterEnrollment.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public DBOperations dBOperations;
+        //public DBOperations dBOperations;
         private readonly DatabaseContext _context;
 
         public ValuesController(DatabaseContext context)
@@ -111,7 +111,7 @@ namespace VoterEnrollment.Controllers
 
 
         [HttpGet("[action]")]
-        public string GetEnrollmentNumber(int StateId, int CityId, int ConstituencyId,int WardNumberId,string EnrollerName, string Email, DateTime DOB, string FatherName)
+        public string GetEnrollmentNumber(int StateId, int CityId,string PhoneNumber,  int ConstituencyId,int WardNumberId,string EnrollerName, string Email, DateTime DOB, string FatherName)
         {
             string EnrollNumber = generateEnrollmentNumber();
             VoterEnrollmentt enrollment = new VoterEnrollmentt();
@@ -123,6 +123,7 @@ namespace VoterEnrollment.Controllers
             enrollment.Email = Email;
             enrollment.DOB = DOB;
             enrollment.FatherName = FatherName;
+            enrollment.PhoneNumber = PhoneNumber;
             enrollment.EnrollmentNumber = EnrollNumber;
             enrollment.DateCreated = DateTime.Now;
             _context.Update(enrollment);
