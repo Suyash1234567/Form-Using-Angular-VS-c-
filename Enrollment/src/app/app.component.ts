@@ -7,8 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';  //HttpClient us
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent
-{
+export class AppComponent {
   public states: GetStates[];
   public cities: GetCity[];
   public constituencies: GetConstituency[];
@@ -25,7 +24,7 @@ export class AppComponent
   email: string = "";
   phone: string = "";
 
- 
+
 
   constructor(private http: HttpClient) {
     http.get<GetStates[]>('http://localhost:54772/api/values/GetStates').subscribe(result => {
@@ -33,15 +32,15 @@ export class AppComponent
       console.log(result);
     }, error => console.error(error));
   }
-  
+
   GetCity(stateId) {
     //alert(stateId);
     var data = stateId;
-    this.http.get<GetCity[]>('http://localhost:54772/api/values/GetCity?StateId='+ data).subscribe(result => {
+    this.http.get<GetCity[]>('http://localhost:54772/api/values/GetCity?StateId=' + data).subscribe(result => {
       this.cities = result;
       console.log(result);
     }, error => console.error(error));
-   
+
   }
 
   GetConstituency(cityId) {
@@ -67,25 +66,31 @@ export class AppComponent
 
   }
 
-  SubmitMe() {
-   
-    console.log(this.stateId);
-    console.log(this.fullName);
-    console.log(this.consId);
-    console.log(this.fatherName);
-    console.log(this.dob);
-    console.log(this.cityId);
-    console.log(this.wardId);
-    console.log(this.phone);
-    console.log(this.email);
-    var data = new Object();
-    data["StateId"] = this.stateId;
 
-    this.http.get<any>('http://localhost:54772/api/values/GetEnrollmentNumber?StateId=' + this.stateId + '&CityId=' + this.cityId + '&ConstituencyId=' + this.consId + '&WardNumberId=' + this.wardId + '&EnrollerName=' + this.fullName + '&Email=' + this.email + '&DOB=' + this.dob + '&PhoneNumber=' + this.phone + '&FatherName=' + this.fatherName).subscribe(result => {
-      //this.cities = result;
-      console.log(result);
-      alert("Data saved successfully!! Please check your email for enrollment number.");
-    }, error => console.error(error));
+  SubmitMe() {
+    if (this.stateId != 0 && this.cityId != 0 && this.consId != 0 && this.wardId != 0) {
+      console.log(this.stateId);
+      console.log(this.fullName);
+      console.log(this.consId);
+      console.log(this.fatherName);
+      console.log(this.dob);
+      console.log(this.cityId);
+      console.log(this.wardId);
+      console.log(this.phone);
+      console.log(this.email);
+      var data = new Object();
+      data["StateId"] = this.stateId;
+
+      this.http.get<any>('http://localhost:54772/api/values/GetEnrollmentNumber?StateId=' + this.stateId + '&CityId=' + this.cityId + '&ConstituencyId=' + this.consId + '&WardNumberId=' + this.wardId + '&EnrollerName=' + this.fullName + '&Email=' + this.email + '&DOB=' + this.dob + '&PhoneNumber=' + this.phone + '&FatherName=' + this.fatherName).subscribe(result => {
+        //this.cities = result;
+        console.log(result);
+        alert("Data saved successfully!! Please check your email for enrollment number.");
+      }, error => console.error(error));
+    }
+    else 
+    {
+      alert ("Ensure all the fields are filled!");
+    }
   }
 }
 
@@ -95,7 +100,7 @@ export class AppComponent
 interface GetStates {
   StateId: number;
   StateName: string;
-  
+
 }
 interface GetCity {
   CityId: number;

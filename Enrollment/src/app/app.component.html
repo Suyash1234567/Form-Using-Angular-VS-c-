@@ -6,17 +6,21 @@
 </p>
 
 <form novalidate #voterForm="ngForm" (ngSubmit)="SubmitMe()">
-<div class="form-group">
+  <div class="form-group">
     <div class="row">
-      <div class="alert-danger" asp-validation-summary="ModelOnly"></div>  
+      <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
       <!-- validation summary tag helper (ModelOnly) is used to display validation messages that apply to your entire model -->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
         <label class="control-label"> State Name</label>
 
-        <select required id="StateId" name="StateId"  [(ngModel)]="stateId"
-                class="form-control" (change)="GetCity($event.target.value)">
+        <select id="StateId" name="StateId" [(ngModel)]="stateId" class="form-control" (change)="GetCity($event.target.value)" required>
           <option *ngFor="let state of states" value={{state.stateId}}>{{state.stateName}}</option>
         </select>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="name.errors.required">
+            State is required.
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -26,8 +30,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label"> City Name</label>
 
-      <select required id="CityId" name="CityId"  [(ngModel)]="cityId"
-              class="form-control" (change)="GetConstituency($event.target.value)">
+      <select required id="CityId" name="CityId" [(ngModel)]="cityId" class="form-control" (change)="GetConstituency($event.target.value)">
         <option *ngFor="let city of cities" value={{city.cityId}}>{{city.cityName}}</option>
       </select>
     </div>
@@ -38,8 +41,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label"> Constituency Name</label>
 
-      <select required id="ConsId" name="ConsId"  [(ngModel)]="consId"
-              class="form-control" (change)="GetWardNo($event.target.value)">
+      <select required id="ConsId" name="ConsId" [(ngModel)]="consId" class="form-control" (change)="GetWardNo($event.target.value)">
         <option *ngFor="let cons of constituencies" value={{cons.constituencyId}}>{{cons.constituencyName}}</option>
       </select>
     </div>
@@ -50,8 +52,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label"> Ward Number</label>
 
-      <select required id="WardId" name="WardId"  [(ngModel)]="wardId"
-              class="form-control" >
+      <select required id="WardId" name="WardId" [(ngModel)]="wardId" class="form-control">
         <option *ngFor="let ward of wards" value={{ward.wardNumberId}}>{{ward.wardNumber}}</option>
       </select>
     </div>
@@ -61,15 +62,16 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Full Name</label>
-      <input class="form-control"  value="" name="fullName" [(ngModel)]="fullName" required minlength="4" #name="ngModel" placeholder="Full Name"  />
+      <input class="form-control" value="" name="fullName" [(ngModel)]="fullName" required minlength="4" #name="ngModel" placeholder="Full Name"
+      />
       <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-          <div *ngIf="name.errors.required">
-              Name is required.
-          </div>
-          <div *ngIf="name.errors.minlength">
-              Name must be at least 4 characters long.
-          </div>
-      </div>    
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+      </div>
     </div>
   </div>
   <br>
@@ -77,13 +79,14 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Father Name</label>
-      <input class="form-control" required minlength="4" #fathersName="ngModel" #ref type="text" value="" name="fatherName" [(ngModel)]="fatherName" placeholder="Father Name"/>
-      
+      <input class="form-control" required minlength="4" #fathersName="ngModel" #ref type="text" value="" name="fatherName" [(ngModel)]="fatherName"
+        placeholder="Father Name" />
+
 
       <div *ngIf="fathersName.invalid && (fathersName.dirty || fathersName.touched)" class="alert alert-danger">
 
         <div *ngIf="fathersName.errors.required">
-           Father Name is required.
+          Father Name is required.
         </div>
         <div *ngIf="fathersName.errors.minlength">
           Father Name must be at least 4 characters long.
@@ -98,20 +101,21 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">DOB</label>
-      <input class="form-control" #dateOfBirth="ngModel" #ref type="date" required value="" name="dob" [(ngModel)]="dob" placeholder="DOB"  />
-      
+      <input class="form-control" #dateOfBirth="ngModel" #ref type="date" required value="" name="dob" [(ngModel)]="dob" placeholder="DOB"
+      />
+
 
       <div *ngIf="dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched)" class="alert alert-danger">
 
-          <div *ngIf="dateOfBirth.errors.required">
-             Date is required.
-          </div>
-          
+        <div *ngIf="dateOfBirth.errors.required">
+          Date is required.
+        </div>
+
       </div>
-    
-    
-    
-    
+
+
+
+
     </div>
   </div>
   <br>
@@ -119,21 +123,22 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Email</label>
-      <input class="form-control" #emailAddress="ngModel" required #ref type="text" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" value="" name="Email" [(ngModel)]="email" placeholder="Email"  />
-    
+      <input class="form-control" #emailAddress="ngModel" required #ref type="text" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+        value="" name="Email" [(ngModel)]="email" placeholder="Email" />
+
       <div *ngIf="emailAddress.invalid && (emailAddress.dirty || emailAddress.touched)" class="alert alert-danger">
-  
-          <div *ngIf="emailAddress.errors.required">
-            Email is required.
-          </div>
-          <div *ngIf="emailAddress.errors.pattern">
-           Invalid Email Format!
-          </div>
-          
-    
+
+        <div *ngIf="emailAddress.errors.required">
+          Email is required.
+        </div>
+        <div *ngIf="emailAddress.errors.pattern">
+          Invalid Email Format!
+        </div>
+
+
       </div>
-    
-    
+
+
     </div>
   </div>
   <br>
@@ -141,23 +146,24 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Phone Number</label>
-      <input class="form-control" #phonNumber="ngModel" required minlength="10" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone" placeholder="PhoneNumber"  />
-    
+      <input class="form-control" #phonNumber="ngModel" required minlength="10" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone"
+        placeholder="PhoneNumber" />
+
       <div *ngIf="phonNumber.invalid && (phonNumber.dirty || phonNumber.touched)" class="alert alert-danger">
-  
+
         <div *ngIf="phonNumber.errors.required">
           Phone Number is required.
         </div>
         <div *ngIf="phonNumber.errors.length">
-         Phone Number must consist of 10 digits.
+          Phone Number must consist of 10 digits.
         </div>
-        
-  
+
+
       </div>
-    
-    
-    
-    
+
+
+
+
     </div>
   </div>
   <br>
@@ -165,7 +171,7 @@
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-      <input id="Submit1" type="submit" value="submit" [disabled]="voterForm.invalid"  />
+      <input id="Submit1" type="submit" value="submit" [disabled]="voterForm.invalid" />
     </div>
   </div>
 </form>
