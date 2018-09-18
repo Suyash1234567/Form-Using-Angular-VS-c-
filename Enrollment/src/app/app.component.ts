@@ -35,7 +35,7 @@ export class AppComponent
   }
   
   GetCity(stateId) {
-    alert(stateId);
+    //alert(stateId);
     var data = stateId;
     this.http.get<GetCity[]>('http://localhost:54772/api/values/GetCity?StateId='+ data).subscribe(result => {
       this.cities = result;
@@ -45,7 +45,7 @@ export class AppComponent
   }
 
   GetConstituency(cityId) {
-    alert(cityId);
+    //alert(cityId);
     var data = cityId;
     this.http.get<GetConstituency[]>('http://localhost:54772/api/values/GetConstituency?cityId=' + data).subscribe(result => {
       this.constituencies = result;
@@ -58,7 +58,7 @@ export class AppComponent
   }
 
   GetWardNo(constituencyId) {
-    alert(constituencyId);
+    //alert(constituencyId);
     var data = constituencyId;
     this.http.get<GetWard[]>('http://localhost:54772/api/values/getWard?constituencyId=' + data).subscribe(result => {
       this.wards = result;

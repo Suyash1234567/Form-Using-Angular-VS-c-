@@ -5,7 +5,7 @@
   <em>Loading...</em>
 </p>
 
-
+<form novalidate #voterForm="ngForm" (ngSubmit)="SubmitMe()">
 <div class="form-group">
     <div class="row">
       <div class="alert-danger" asp-validation-summary="ModelOnly"></div>  
@@ -61,7 +61,15 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Full Name</label>
-      <input class="form-control"  value="" name="fullName" [(ngModel)]="fullName" placeholder="Full Name"  />
+      <input class="form-control"  value="" name="fullName" [(ngModel)]="fullName" required minlength="4" #name="ngModel" placeholder="Full Name"  />
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="name.errors.required">
+              Name is required.
+          </div>
+          <div *ngIf="name.errors.minlength">
+              Name must be at least 4 characters long.
+          </div>
+      </div>    
     </div>
   </div>
   <br>
@@ -69,7 +77,20 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Father Name</label>
-      <input class="form-control" #ref type="text" value="" name="fatherName" [(ngModel)]="fatherName" placeholder="Father Name"/>
+      <input class="form-control" required minlength="4" #fathersName="ngModel" #ref type="text" value="" name="fatherName" [(ngModel)]="fatherName" placeholder="Father Name"/>
+      
+
+      <div *ngIf="fathersName.invalid && (fathersName.dirty || fathersName.touched)" class="alert alert-danger">
+
+        <div *ngIf="fathersName.errors.required">
+           Father Name is required.
+        </div>
+        <div *ngIf="fathersName.errors.minlength">
+          Father Name must be at least 4 characters long.
+        </div>
+      </div>
+
+
     </div>
   </div>
   <br>
@@ -77,7 +98,20 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">DOB</label>
-      <input class="form-control" #ref type="date" value="" name="dob" [(ngModel)]="dob" placeholder="DOB"  />
+      <input class="form-control" #dateOfBirth="ngModel" #ref type="date" required value="" name="dob" [(ngModel)]="dob" placeholder="DOB"  />
+      
+
+      <div *ngIf="dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched)" class="alert alert-danger">
+
+          <div *ngIf="dateOfBirth.errors.required">
+             Date is required.
+          </div>
+          
+      </div>
+    
+    
+    
+    
     </div>
   </div>
   <br>
@@ -85,7 +119,21 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Email</label>
-      <input class="form-control" #ref type="text" value="" name="Email" [(ngModel)]="email" placeholder="Email"  />
+      <input class="form-control" #emailAddress="ngModel" required #ref type="text" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" value="" name="Email" [(ngModel)]="email" placeholder="Email"  />
+    
+      <div *ngIf="emailAddress.invalid && (emailAddress.dirty || emailAddress.touched)" class="alert alert-danger">
+  
+          <div *ngIf="emailAddress.errors.required">
+            Email is required.
+          </div>
+          <div *ngIf="emailAddress.errors.pattern">
+           Invalid Email Format!
+          </div>
+          
+    
+      </div>
+    
+    
     </div>
   </div>
   <br>
@@ -93,7 +141,23 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Phone Number</label>
-      <input class="form-control" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone" placeholder="PhoneNumber"  />
+      <input class="form-control" #phonNumber="ngModel" required maxlength="10" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone" placeholder="PhoneNumber"  />
+    
+      <div *ngIf="phonNumber.invalid && (phonNumber.dirty || phonNumber.touched)" class="alert alert-danger">
+  
+        <div *ngIf="phonNumber.errors.required">
+          Phone Number is required.
+        </div>
+        <div *ngIf="phonNumber.errors.maxlength">
+         Phone Number must consist of atleast 10 digits.
+        </div>
+        
+  
+      </div>
+    
+    
+    
+    
     </div>
   </div>
   <br>
@@ -101,156 +165,7 @@
   <div class="row">
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-      <input id="Submit1" type="submit" value="submit" (click)="SubmitMe()" />
+      <input id="Submit1" type="submit" value="submit" [disabled]="voterForm.invalid"  />
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-  crossorigin="anonymous">
-<div class="content_area">
-  <div class="heading">
-    <h1>Register</h1>
-  </div>
-  <div class="form">
-    <form [formGroup]="RegistrationForm" (keyup.enter)="onSubmit" (ngSubmit)="onSubmit()" id="contact">
-      <div class="container">
-        <div class="form-group"> -->
-          <!-- <input class="form-control" #ref type="text" value="rwerwerewrew" name="stateName" placeholder="State Name*"
-            formControlName="stateName" />
-          <span class="error" *ngIf="RegistrationForm.controls['stateName'].touched && !RegistrationForm.controls['stateName'].valid && RegistrationForm.controls['stateName'].dirty">Invalid
-            first Name </span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label"> State Name</label>
-
-            <select id="StateId" name="StateId" [(ngModel)]="stateId" class="form-control" (change)="GetCity($event.target.value)">
-              <option *ngFor="let state of states" value={{state.stateId}}>{{state.stateName}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" name="contactNo" placeholder="Contact No*" formControlName="contactNo">
-            <span class="error" *ngIf="RegistrationForm.controls['contactNo'].touched && !RegistrationForm.controls['contactNo'].valid && RegistrationForm.controls['contactNo'].dirty">Invalid
-            conact</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label"> City Name</label>
-
-            <select id="CityId" name="CityId" [(ngModel)]="cityId" class="form-control" (change)="GetConstituency($event.target.value)">
-              <option *ngFor="let city of cities" value={{city.cityId}}>{{city.cityName}}</option>
-            </select>
-          </div>
-        </div>
-
-
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" value name="lastName" placeholder="Last Name*" formControlName="lastName" />
-            <span class="error" *ngIf="RegistrationForm.controls['lastName'].touched && !RegistrationForm.controls['lastName'].valid && RegistrationForm.controls['lastName'].dirty">Invalid
-            last name</span> -->
-
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label"> Constituency Name</label>
-
-            <select id="ConsId" name="ConsId" [(ngModel)]="consId" class="form-control" (change)="GetWardNo($event.target.value)">
-              <option *ngFor="let cons of constituencies" value={{cons.constituencyId}}>{{cons.constituencyName}}</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" name="email" placeholder="Email Address*" formControlName="email" />
-            <span class="error" *ngIf="RegistrationForm.controls['email'].touched && !RegistrationForm.controls['email'].valid && RegistrationForm.controls['email'].dirty">Invalid
-            email</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label"> Ward Number</label>
-
-            <select id="WardId" name="WardId" [(ngModel)]="wardId" class="form-control" (change)="GetWardNoDetails($event.target.value)">
-              <option *ngFor="let ward of wards" value={{ward.wardNumberId}}>{{ward.wardNumber}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" name="emp_id" placeholder="Employee Id*" formControlName="empId" />
-            <span class="error" *ngIf="RegistrationForm.controls['empId'].touched && !RegistrationForm.controls['empId'].valid && RegistrationForm.controls['empId'].dirty">Invalid
-            employee id</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label">Full Name</label>
-            <input class="form-control" value="" name="fullName" [(ngModel)]="fullName" placeholder="Full Name" />
-          </div>
-        </div>
-
-
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" name="emp_id" placeholder="Employee Id*" formControlName="empId" />
-          <span class="error" *ngIf="RegistrationForm.controls['empId'].touched && !RegistrationForm.controls['empId'].valid && RegistrationForm.controls['empId'].dirty">Invalid
-          employee id</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label">Father Name</label>
-            <input class="form-control" #ref type="text" value="" name="fatherName" [(ngModel)]="fatherName" placeholder="Father Name"
-            />
-          </div>
-        </div>
-
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" name="emp_id" placeholder="Employee Id*" formControlName="empId" />
-          <span class="error" *ngIf="RegistrationForm.controls['empId'].touched && !RegistrationForm.controls['empId'].valid && RegistrationForm.controls['empId'].dirty">Invalid
-          employee id</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label">DOB</label>
-            <input class="form-control" #ref type="date" value="" name="dob" [(ngModel)]="dob" placeholder="DOB" />
-          </div>
-        </div>
-
-
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" name="emp_id" placeholder="Employee Id*" formControlName="empId" />
-          <span class="error" *ngIf="RegistrationForm.controls['empId'].touched && !RegistrationForm.controls['empId'].valid && RegistrationForm.controls['empId'].dirty">Invalid
-          employee id</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label">Email</label>
-            <input class="form-control" #ref type="text" value="" name="Email" [(ngModel)]="email" placeholder="Email" />
-          </div>
-        </div>
-
-
-        <div class="form-group"> -->
-          <!-- <input class="form-control" type="text" name="emp_id" placeholder="Employee Id*" formControlName="empId" />
-          <span class="error" *ngIf="RegistrationForm.controls['empId'].touched && !RegistrationForm.controls['empId'].valid && RegistrationForm.controls['empId'].dirty">Invalid
-          employee id</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <label class="control-label">Phone Number</label>
-            <input class="form-control" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone" placeholder="PhoneNumber" />
-          </div>
-        </div>
-
-
-        <div class="form-actions"> -->
-          <!-- <input class="form-control" type="text" name="emp_id" placeholder="Employee Id*" formControlName="empId" />
-          <span class="error" *ngIf="RegistrationForm.controls['empId'].touched && !RegistrationForm.controls['empId'].valid && RegistrationForm.controls['empId'].dirty">Invalid
-          employee id</span> -->
-          <!-- <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <input id="submit" type="submit" [disabled]="!RegistrationForm.valid" value="submit" (click)="SubmitMe()" />
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</div> -->
+</form>
