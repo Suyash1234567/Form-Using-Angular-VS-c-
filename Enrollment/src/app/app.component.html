@@ -13,7 +13,7 @@
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
         <label class="control-label"> State Name</label>
 
-        <select id="StateId" name="StateId"  [(ngModel)]="stateId"
+        <select required id="StateId" name="StateId"  [(ngModel)]="stateId"
                 class="form-control" (change)="GetCity($event.target.value)">
           <option *ngFor="let state of states" value={{state.stateId}}>{{state.stateName}}</option>
         </select>
@@ -26,7 +26,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label"> City Name</label>
 
-      <select id="CityId" name="CityId"  [(ngModel)]="cityId"
+      <select required id="CityId" name="CityId"  [(ngModel)]="cityId"
               class="form-control" (change)="GetConstituency($event.target.value)">
         <option *ngFor="let city of cities" value={{city.cityId}}>{{city.cityName}}</option>
       </select>
@@ -38,7 +38,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label"> Constituency Name</label>
 
-      <select id="ConsId" name="ConsId"  [(ngModel)]="consId"
+      <select required id="ConsId" name="ConsId"  [(ngModel)]="consId"
               class="form-control" (change)="GetWardNo($event.target.value)">
         <option *ngFor="let cons of constituencies" value={{cons.constituencyId}}>{{cons.constituencyName}}</option>
       </select>
@@ -50,7 +50,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label"> Ward Number</label>
 
-      <select id="WardId" name="WardId"  [(ngModel)]="wardId"
+      <select required id="WardId" name="WardId"  [(ngModel)]="wardId"
               class="form-control" >
         <option *ngFor="let ward of wards" value={{ward.wardNumberId}}>{{ward.wardNumber}}</option>
       </select>
@@ -141,15 +141,15 @@
     <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
       <label class="control-label">Phone Number</label>
-      <input class="form-control" #phonNumber="ngModel" required maxlength="10" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone" placeholder="PhoneNumber"  />
+      <input class="form-control" #phonNumber="ngModel" required minlength="10" #ref type="text" value="" name="PhoneNumber" [(ngModel)]="phone" placeholder="PhoneNumber"  />
     
       <div *ngIf="phonNumber.invalid && (phonNumber.dirty || phonNumber.touched)" class="alert alert-danger">
   
         <div *ngIf="phonNumber.errors.required">
           Phone Number is required.
         </div>
-        <div *ngIf="phonNumber.errors.maxlength">
-         Phone Number must consist of atleast 10 digits.
+        <div *ngIf="phonNumber.errors.length">
+         Phone Number must consist of 10 digits.
         </div>
         
   
