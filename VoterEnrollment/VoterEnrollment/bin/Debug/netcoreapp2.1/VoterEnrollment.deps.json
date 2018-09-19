@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "904c15538b213eb00bb9f107beeea790e77cf4be"
+    "signature": "9e3d336c36b7b0d6f4789ab251f12e9169b89230"
   },
   "compilationOptions": {
     "defines": [
@@ -31,8 +31,10 @@
           "Microsoft.EntityFrameworkCore": "2.1.3",
           "Microsoft.Extensions.Logging": "2.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "2.2.5",
           "Microsoft.NETCore.App": "2.1.0",
           "NLog.Extensions.Logging": "1.2.1",
+          "NLog.Web": "4.6.0",
           "log4net": "2.0.8"
         },
         "runtime": {
@@ -116,6 +118,23 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/2.1.3": {},
+      "Microsoft.Extensions.Logging.Log4Net.AspNetCore/2.2.5": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.1.1",
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "System.Xml.XPath.XDocument": "4.3.0",
+          "log4net": "2.0.8"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.1.0": {
         "dependencies": {
           "Microsoft.NETCore.DotNetHostPolicy": "2.1.0",
@@ -318,6 +337,20 @@
         },
         "compile": {
           "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Web/4.6.0": {
+        "dependencies": {
+          "NLog": "4.5.8"
+        },
+        "runtime": {
+          "lib/net35/NLog.Web.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.0.875"
+          }
+        },
+        "compile": {
+          "lib/net35/NLog.Web.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3508,6 +3541,13 @@
       "path": "microsoft.entityframeworkcore.analyzers/2.1.3",
       "hashPath": "microsoft.entityframeworkcore.analyzers.2.1.3.nupkg.sha512"
     },
+    "Microsoft.Extensions.Logging.Log4Net.AspNetCore/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iqnFfmQuFjMzvtMtdhT9/q1/ODaqi3rdp7pHwb1KE+1Mvfor4xPWIBhiWidvAMrqcLMbueadW8TnF3wxpiUYLg==",
+      "path": "microsoft.extensions.logging.log4net.aspnetcore/2.2.5",
+      "hashPath": "microsoft.extensions.logging.log4net.aspnetcore.2.2.5.nupkg.sha512"
+    },
     "Microsoft.NETCore.App/2.1.0": {
       "type": "package",
       "serviceable": true,
@@ -3560,7 +3600,7 @@
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "sha512-4D4y+fPDvvoO0poAESGq0/xmNUMYzVW6/f2SZ4nmuAx146XBcI0GWTYvrgyh3Ha8wBT3aBEW6owp6hXxhvb1ag==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
@@ -3577,6 +3617,13 @@
       "sha512": "sha512-FEwSQFXrj1kp4kcG1q7E/vKM+jVyCUQ9R/sb18+iyjD2gpEY+d24OFDWQiSC+L9rcdWETjF8YzYS1O2pFzFZ9w==",
       "path": "nlog.extensions.logging/1.2.1",
       "hashPath": "nlog.extensions.logging.1.2.1.nupkg.sha512"
+    },
+    "NLog.Web/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qRz0GFhiGJ0I7Tkjie6TWJLD8LiOSHrhRndCgLOkmpBxRjOFM1OZQ9qsvM2xDID9LgWwwmQ2Z47slq3Kq1WWHA==",
+      "path": "nlog.web/4.6.0",
+      "hashPath": "nlog.web.4.6.0.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
@@ -3658,7 +3705,7 @@
     "System.Runtime.Serialization.Formatters/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "sha512-kQ59hX8kDYMBp/13DBzpXsNqRDms1I/+7vbkabhk0QoHAE6S0RRFQvXvni3jesuwcndwmP++5Iasmnscr93PBw==",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "hashPath": "system.runtime.serialization.formatters.4.3.0.nupkg.sha512"
     },
@@ -5530,7 +5577,7 @@
     "System.Xml.XPath.XDocument/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
+      "sha512": "sha512-jpG1rmouQBUxenW37d245r5FF7RWOHv4Ec4r8KErWRzpgvoX+iqo4aRILkg/yRut8GswnxjyzB96uRlGKWV/WA==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     }

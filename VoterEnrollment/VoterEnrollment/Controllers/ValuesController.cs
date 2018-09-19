@@ -67,13 +67,15 @@ namespace VoterEnrollment.Controllers
 
                 // ------- Inserting Select Item in List -------
                 stateList.Insert(0, new States { StateId = 0, StateName = "Select" });
-
+                log.Debug("test");
+                //throw new Exception();
                 //throw new DivideByZeroException();
                 return stateList;
             }
             catch(Exception ex)
             {
-                WriteToLogFile("Error accourred in GetStates Function on" + DateTime.Now + ":" + ex.Message);
+                log.Error("Error accourred in GetStates Function on" + DateTime.Now + ":" + ex.Message);
+                throw ex;
                 return null;
             }
         }
@@ -105,7 +107,7 @@ namespace VoterEnrollment.Controllers
             catch(Exception ex)
             {
                 //_logger.LogWarning(LoggingEvent.UserNameProperty, "Get StateId({ID}) NOT FOUND", StateId);
-                WriteToLogFile("Error occured in GetCity Function on" + DateTime.Now + ":" + ex.Message);
+                log.Error("Error occured in GetCity Function on" + DateTime.Now + ":" + ex.Message);
                 return null;
             }
         }
@@ -129,7 +131,7 @@ namespace VoterEnrollment.Controllers
             }
             catch(Exception ex)
             {
-                WriteToLogFile("Error accourred in GetConstituency Function on" + DateTime.Now + ":" + ex.Message);
+                log.Error("Error accourred in GetConstituency Function on" + DateTime.Now + ":" + ex.Message);
                 return null;
             }
         }
@@ -154,7 +156,7 @@ namespace VoterEnrollment.Controllers
             }
             catch(Exception ex)
             {
-                WriteToLogFile("Error accourred in GetWard Function on" + DateTime.Now + ":" + ex.Message);
+                log.Error("Error accourred in GetWard Function on" + DateTime.Now + ":" + ex.Message);
                 return null;
             }
         }
@@ -190,7 +192,7 @@ namespace VoterEnrollment.Controllers
             }
             catch
             {
-                WriteToLogFile("Error accourred in GetEnrollmentNumber Function on" + DateTime.Now );
+                log.Error("Error accourred in GetEnrollmentNumber Function on" + DateTime.Now );
                 return "";
             }
 
@@ -249,7 +251,7 @@ namespace VoterEnrollment.Controllers
             }
             catch (Exception ex)
             {
-                WriteToLogFile("Error accourred in Send Email Function on "+ DateTime.Now +":"+  ex.Message);
+                log.Error("Error accourred in Send Email Function on "+ DateTime.Now +":"+  ex.Message);
             }
         }
 

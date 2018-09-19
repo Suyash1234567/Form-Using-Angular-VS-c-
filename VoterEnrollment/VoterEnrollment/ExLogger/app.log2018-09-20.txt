@@ -1,0 +1,335 @@
+2018-09-20 00:26:06,886 [1] INFO  App  
+ Application - Main is invoked 
+ 
+2018-09-20 00:26:27,026 [7] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values   
+ 
+2018-09-20 00:26:27,026 [8] INFO  App  
+ Request starting HTTP/1.1 DEBUG http://localhost:54772/  0 
+ 
+2018-09-20 00:26:27,100 [8] INFO  App  
+ Request finished in 64.0842ms 200  
+ 
+2018-09-20 00:26:27,458 [7] INFO  App  
+ Request finished in 421.9099ms 404  
+ 
+2018-09-20 00:26:31,153 [7] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/getstates   
+ 
+2018-09-20 00:26:31,246 [7] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 00:26:31,567 [7] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 00:26:32,280 [7] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 00:26:32,842 [7] INFO  App  
+ Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 00:26:32,943 [7] ERROR App  
+ test 
+ 
+2018-09-20 00:26:32,950 [7] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1376.6957ms. 
+ 
+2018-09-20 00:26:32,965 [7] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 00:26:33,071 [7] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 1805.6788ms 
+ 
+2018-09-20 00:26:33,186 [7] INFO  App  
+ Request finished in 1964.0883ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 00:26:33,191 [8] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/favicon.ico   
+ 
+2018-09-20 00:26:33,205 [8] INFO  App  
+ Request finished in 20.9633ms 404  
+ 
+2018-09-20 00:38:40,707 [1] INFO  App  
+ Application - Main is invoked 
+ 
+2018-09-20 00:38:43,445 [9] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values   
+ 
+2018-09-20 00:38:43,445 [10] INFO  App  
+ Request starting HTTP/1.1 DEBUG http://localhost:54772/  0 
+ 
+2018-09-20 00:38:43,581 [10] INFO  App  
+ Request finished in 117.2136ms 200  
+ 
+2018-09-20 00:38:44,090 [9] INFO  App  
+ Request finished in 560.924ms 404  
+ 
+2018-09-20 00:39:01,890 [1] INFO  App  
+ Application - Main is invoked 
+ 
+2018-09-20 00:40:49,498 [7] INFO  App  
+ Request starting HTTP/1.1 DEBUG http://localhost:54772/  0 
+ 
+2018-09-20 00:40:49,498 [9] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values   
+ 
+2018-09-20 00:40:49,662 [7] INFO  App  
+ Request finished in 156.7611ms 200  
+ 
+2018-09-20 00:40:50,115 [9] INFO  App  
+ Request finished in 557.3167ms 404  
+ 
+2018-09-20 00:40:58,958 [7] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/getstates   
+ 
+2018-09-20 00:40:59,240 [7] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 00:40:59,968 [7] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 00:41:01,455 [7] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 00:41:02,608 [7] INFO  App  
+ Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 00:41:02,797 [7] DEBUG App  
+ test 
+ 
+2018-09-20 00:41:05,815 [7] ERROR App  
+ Error accourred in GetStates Function on9/20/2018 12:41:05 AM:Exception of type 'System.Exception' was thrown. 
+ 
+2018-09-20 00:41:17,778 [10] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 00:41:17,797 [9] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 00:41:17,801 [10] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 00:41:17,819 [9] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 00:41:17,829 [7] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 18559.7598ms 
+ 
+2018-09-20 00:41:17,852 [9] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 00:41:17,884 [10] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 00:41:17,893 [9] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 00:41:17,906 [10] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 00:41:17,911 [9] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 00:41:17,961 [10] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 00:41:18,031 [9] INFO  App  
+ Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 00:41:18,036 [10] INFO  App  
+ Executed DbCommand (70ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 00:41:18,036 [9] DEBUG App  
+ test 
+ 
+2018-09-20 00:41:18,037 [10] DEBUG App  
+ test 
+ 
+2018-09-20 00:41:18,160 [9] ERROR App  
+ Error accourred in GetStates Function on9/20/2018 12:41:18 AM:Exception of type 'System.Exception' was thrown. 
+ 
+2018-09-20 00:41:18,160 [10] ERROR App  
+ Error accourred in GetStates Function on9/20/2018 12:41:18 AM:Exception of type 'System.Exception' was thrown. 
+ 
+2018-09-20 00:41:21,550 [9] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 3646.0873ms 
+ 
+2018-09-20 00:41:56,016 [1] INFO  App  
+ Application - Main is invoked 
+ 
+2018-09-20 00:42:02,360 [7] INFO  App  
+ Request starting HTTP/1.1 DEBUG http://localhost:54772/  0 
+ 
+2018-09-20 00:42:02,360 [9] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values   
+ 
+2018-09-20 00:42:02,546 [7] INFO  App  
+ Request finished in 144.5911ms 200  
+ 
+2018-09-20 00:42:03,044 [9] INFO  App  
+ Request finished in 695.2581ms 404  
+ 
+2018-09-20 00:42:04,290 [7] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/getstates   
+ 
+2018-09-20 00:42:04,360 [7] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 00:42:04,721 [7] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 00:42:05,712 [7] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 00:42:06,412 [7] INFO  App  
+ Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 00:42:06,563 [7] DEBUG App  
+ test 
+ 
+2018-09-20 00:42:06,654 [7] ERROR App  
+ Error accourred in GetStates Function on9/20/2018 12:42:06 AM:Exception of type 'System.Exception' was thrown. 
+ 
+2018-09-20 00:42:18,412 [7] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 14043.9468ms 
+ 
+2018-09-20 00:42:18,703 [7] ERROR App  
+ An unhandled exception has occurred while executing the request. 
+ 
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at VoterEnrollment.Controllers.ValuesController.GetStates() in C:\Users\Vivek\Desktop\DotNet\Voter\VoterEnrollment\VoterEnrollment\Controllers\ValuesController.cs:line 78
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-20 00:42:18,985 [7] INFO  App  
+ Request finished in 14695.857ms 500 text/html; charset=utf-8 
+ 
+2018-09-20 00:44:13,583 [1] INFO  App  
+ Application - Main is invoked 
+ 
+2018-09-20 00:44:15,036 [12] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 00:44:15,330 [12] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 00:44:15,337 [12] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 00:44:15,566 [12] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 00:44:16,373 [12] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 00:44:18,768 [12] INFO  App  
+ Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 00:44:18,916 [12] DEBUG App  
+ test 
+ 
+2018-09-20 00:44:18,919 [12] ERROR App  
+ Error accourred in GetStates Function on9/20/2018 12:44:18 AM:Exception of type 'System.Exception' was thrown. 
+ 
+2018-09-20 00:44:18,926 [12] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 3590.6014ms 
+ 
+2018-09-20 00:44:19,012 [12] ERROR App  
+ An unhandled exception has occurred while executing the request. 
+ 
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at VoterEnrollment.Controllers.ValuesController.GetStates() in C:\Users\Vivek\Desktop\DotNet\Voter\VoterEnrollment\VoterEnrollment\Controllers\ValuesController.cs:line 78
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-20 00:44:19,135 [12] INFO  App  
+ Request finished in 4102.9874ms 500 text/html; charset=utf-8 
+ 
+2018-09-20 00:48:00,683 [16] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 00:48:00,687 [16] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 00:48:00,688 [16] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 00:48:00,691 [16] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 00:48:00,695 [16] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 00:48:00,782 [16] INFO  App  
+ Executed DbCommand (75ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 00:48:00,784 [16] DEBUG App  
+ test 
+ 
+2018-09-20 00:48:00,786 [16] ERROR App  
+ Error accourred in GetStates Function on9/20/2018 12:48:00 AM:Exception of type 'System.Exception' was thrown. 
+ 
+2018-09-20 00:48:00,788 [16] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 100.136ms 
+ 
+2018-09-20 00:48:00,791 [16] ERROR App  
+ An unhandled exception has occurred while executing the request. 
+ 
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at VoterEnrollment.Controllers.ValuesController.GetStates() in C:\Users\Vivek\Desktop\DotNet\Voter\VoterEnrollment\VoterEnrollment\Controllers\ValuesController.cs:line 78
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-20 00:48:00,813 [16] INFO  App  
+ Request finished in 129.4621ms 500 text/html; charset=utf-8 
+ 

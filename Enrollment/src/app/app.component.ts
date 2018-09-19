@@ -35,7 +35,8 @@ export class AppComponent {
         this.states = result;
         console.log(result);
       }
-    }, error => console.error(error));
+    }, 
+    error => {console.error(error)});
   }
 
   GetCity(stateId) {
@@ -68,6 +69,8 @@ export class AppComponent {
         console.log(result);
       }
     }, error => console.error(error));
+//     error => { $('#diverror').html=error.message; console.error(error)});  ---> To log error if you want to show them on ui
+// error => { alert(error.message); console.error(error)});
 
   }
   GetWardNoDetails(wardNo) {

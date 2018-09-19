@@ -6,8 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using log4net.Repository.Hierarchy;
-using NLog.Extensions.Logging;
+using Microsoft.Extensions.Logging;
 using NLog.Web;
 
 namespace VoterEnrollment
@@ -49,7 +48,7 @@ namespace VoterEnrollment
             {
                 app.UseDeveloperExceptionPage();
             }
-            //loggerFactory.AddLog4Net();
+            loggerFactory.AddLog4Net();
             app.UseMvc();
             app.UseCors("CORS");
         }

@@ -2217,6 +2217,21 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.EventSource.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.Log4Net.AspNetCore/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.1.1",
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "System.Xml.XPath.XDocument": "4.3.0",
+          "log4net": "2.0.8"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging.TraceSource/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -4652,7 +4667,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -4672,7 +4687,7 @@
           "System.Xml.XPath": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
@@ -6593,6 +6608,20 @@
         "microsoft.extensions.logging.eventsource.nuspec"
       ]
     },
+    "Microsoft.Extensions.Logging.Log4Net.AspNetCore/2.2.5": {
+      "sha512": "iqnFfmQuFjMzvtMtdhT9/q1/ODaqi3rdp7pHwb1KE+1Mvfor4xPWIBhiWidvAMrqcLMbueadW8TnF3wxpiUYLg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.log4net.aspnetcore/2.2.5",
+      "files": [
+        ".signature.p7s",
+        "lib/net462/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll",
+        "lib/netcoreapp1.1/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll",
+        "lib/netcoreapp2.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll",
+        "microsoft.extensions.logging.log4net.aspnetcore.2.2.5.nupkg.sha512",
+        "microsoft.extensions.logging.log4net.aspnetcore.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Logging.TraceSource/2.1.1": {
       "sha512": "lPUHCOezUB7W9hvfJL/5Zaggpy0plgOaqHLM2T5Lv+v3/B4ISWTc4Pd1l33R5dv9v0MF6I4u3Kf732wEX6OPdg==",
       "type": "package",
@@ -7194,7 +7223,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "4D4y+fPDvvoO0poAESGq0/xmNUMYzVW6/f2SZ4nmuAx146XBcI0GWTYvrgyh3Ha8wBT3aBEW6owp6hXxhvb1ag==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -10756,7 +10785,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "kQ59hX8kDYMBp/13DBzpXsNqRDms1I/+7vbkabhk0QoHAE6S0RRFQvXvni3jesuwcndwmP++5Iasmnscr93PBw==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -12418,7 +12447,7 @@
       ]
     },
     "System.Xml.XPath.XDocument/4.3.0": {
-      "sha512": "jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
+      "sha512": "jpG1rmouQBUxenW37d245r5FF7RWOHv4Ec4r8KErWRzpgvoX+iqo4aRILkg/yRut8GswnxjyzB96uRlGKWV/WA==",
       "type": "package",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "files": [
@@ -12474,6 +12503,7 @@
       "Microsoft.EntityFrameworkCore >= 2.1.3",
       "Microsoft.Extensions.Logging >= 2.1.1",
       "Microsoft.Extensions.Logging.Abstractions >= 2.1.1",
+      "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 2.2.5",
       "Microsoft.NETCore.App >= 2.1.0",
       "NLog.Extensions.Logging >= 1.2.1",
       "NLog.Web >= 4.6.0",
@@ -12549,6 +12579,10 @@
           "Microsoft.Extensions.Logging.Abstractions": {
             "target": "Package",
             "version": "[2.1.1, )"
+          },
+          "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+            "target": "Package",
+            "version": "[2.2.5, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
