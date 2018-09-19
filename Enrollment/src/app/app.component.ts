@@ -28,8 +28,13 @@ export class AppComponent {
 
   constructor(private http: HttpClient) {
     http.get<GetStates[]>('http://localhost:54772/api/values/GetStates').subscribe(result => {
-      this.states = result;
-      console.log(result);
+      if (result == null) {
+        alert("Something went wrong in selecting States");
+      }
+      else {
+        this.states = result;
+        console.log(result);
+      }
     }, error => console.error(error));
   }
 
@@ -37,18 +42,31 @@ export class AppComponent {
     //alert(stateId);
     var data = stateId;
     this.http.get<GetCity[]>('http://localhost:54772/api/values/GetCity?StateId=' + data).subscribe(result => {
-      this.cities = result;
-      console.log(result);
+      if (result == null) {
+        alert("Something went wrong to populate city. On potential reason may be : State ID not available");
+      }
+      else {
+        this.cities = result;
+        console.log(result);
+      }
     }, error => console.error(error));
 
   }
 
   GetConstituency(cityId) {
+
     //alert(cityId);
     var data = cityId;
     this.http.get<GetConstituency[]>('http://localhost:54772/api/values/GetConstituency?cityId=' + data).subscribe(result => {
-      this.constituencies = result;
-      console.log(result);
+      if (result == null) 
+      {
+        alert("Something went wrong in populating constituency. On potential reason may be : City ID not available");
+      }
+      else 
+      {
+        this.constituencies = result;
+        console.log(result);
+      }
     }, error => console.error(error));
 
   }
@@ -60,8 +78,16 @@ export class AppComponent {
     //alert(constituencyId);
     var data = constituencyId;
     this.http.get<GetWard[]>('http://localhost:54772/api/values/getWard?constituencyId=' + data).subscribe(result => {
-      this.wards = result;
+      if (result == null) 
+      {
+        alert("Something went wrong in populating ward. On potential reason may be : Constituency ID not available");
+      }
+      else 
+      {  
+    
+    this.wards = result;
       console.log(result);
+      }
     }, error => console.error(error));
 
   }
@@ -87,9 +113,8 @@ export class AppComponent {
         alert("Data saved successfully!! Please check your email for enrollment number.");
       }, error => console.error(error));
     }
-    else 
-    {
-      alert ("Ensure all the fields are filled!");
+    else {
+      alert("Ensure all the fields are filled!");
     }
   }
 }

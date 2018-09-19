@@ -1,0 +1,13 @@
+Error accourred in GetStates Function on9/18/2018 11:33:18 PM:Exception of type 'System.Exception' was thrown.
+Error accourred in GetStates Function on9/18/2018 11:33:22 PM:Exception of type 'System.Exception' was thrown.
+Error accourred in GetStates Function on9/18/2018 11:34:23 PM:Attempted to divide by zero.
+Error accourred in GetStates Function on9/18/2018 11:34:29 PM:Attempted to divide by zero.
+Error accourred in Send Email Function on 9/19/2018 12:03:04 AM:The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+Error accourred in Send Email Function on 9/19/2018 12:08:53 PM:Failure sending mail.
+Error accourred in Send Email Function on 9/19/2018 12:08:55 PM:Failure sending mail.
+Error accourred in Send Email Function on 9/19/2018 12:28:09 PM:The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+Error accourred in Send Email Function on 9/19/2018 2:13:06 PM:Failure sending mail.
+Error accourred in Send Email Function on 9/19/2018 2:18:27 PM:Failure sending mail.
+Error accourred in Send Email Function on 9/19/2018 2:18:51 PM:Failure sending mail.
+Error accourred in Send Email Function on 9/19/2018 2:19:36 PM:Failure sending mail.
+Error accourred in Send Email Function on 9/19/2018 3:54:37 PM:Failure sending mail.

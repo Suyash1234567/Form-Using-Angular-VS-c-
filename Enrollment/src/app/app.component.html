@@ -16,11 +16,11 @@
         <select id="StateId" name="StateId" [(ngModel)]="stateId" class="form-control" (change)="GetCity($event.target.value)" required>
           <option *ngFor="let state of states" value={{state.stateId}}>{{state.stateName}}</option>
         </select>
-        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
           <div *ngIf="name.errors.required">
             State is required.
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

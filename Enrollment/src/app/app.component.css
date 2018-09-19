@@ -1,5 +1,7 @@
 /* @import '~bootstrap/dist/css/bootstrap.min.css'; */
-
+.disabled:hover {
+    cursor:not-allowed
+ }
 body {
     font-family: calibri;
     position: relative;
