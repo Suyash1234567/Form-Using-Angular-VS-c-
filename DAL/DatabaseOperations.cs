@@ -1,9 +1,23 @@
 ﻿using DBTable.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
+using System.Linq;
+using System.Threading.Tasks;
+using log4net.Config;
+using log4net;
+using System.Reflection;
+using System.IO;
+using System.Xml;
+using System.Diagnostics;
+using Microsoft.Extensions.Logging;
+using log4net.Core;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace DAL
 {
@@ -16,6 +30,15 @@ namespace DAL
         {
             _context = context;
         }
+
+        
+
+        //public DatabaseOperations()
+        //{
+
+        //    _context = context;
+
+        //}
 
         public List<States> GetStatesByList()
         {
@@ -37,13 +60,18 @@ namespace DAL
             catch (Exception ex)
             {
                 log.Error("Error occourred in GetStates Function on" + DateTime.Now + ":" + ex.Message);
-                //throw ex;
+                throw ex;
                 return null;
             }
         }
 
         public List<City> GetCityByList(int StateId)
         {
+            //_logger.LogInformation(LoggingEvent.UserNameProperty, "Getting StateId {ID}", StateId);
+            //if(StateId == 0)
+            //{
+            //    return null;
+            //}
             try
             {
                 List<City> cityList = new List<City>();
@@ -61,7 +89,9 @@ namespace DAL
             }
             catch (Exception ex)
             {
+                //_logger.LogWarning(LoggingEvent.UserNameProperty, "Get StateId({ID}) NOT FOUND", StateId);
                 log.Error("Error occured in GetCity Function on" + DateTime.Now + ":" + ex.Message);
+                throw ex;
                 return null;
             }
         }
@@ -86,6 +116,7 @@ namespace DAL
             catch (Exception ex)
             {
                 log.Error("Error accourred in GetConstituency Function on" + DateTime.Now + ":" + ex.Message);
+                throw ex;
                 return null;
             }
         }
@@ -110,6 +141,7 @@ namespace DAL
             catch (Exception ex)
             {
                 log.Error("Error accourred in GetWard Function on" + DateTime.Now + ":" + ex.Message);
+                throw ex;
                 return null;
             }
         }
@@ -141,13 +173,29 @@ namespace DAL
                 //return Json(enrollment.EnrollmentNumber);
                 //return "";
             }
-            catch
+            catch(Exception ex)
             {
                 log.Error("Error accourred in GetEnrollmentNumber Function on" + DateTime.Now);
+                throw ex;
                 return "";
             }
         }
-       
+        //[HttpGet("[action]")]
+        //public string GetEnrollmentNumber(VoterEnrollmentt enrollment)
+        //{
+        //    string EnrollNumber = generateEnrollmentNumber();
+        //    enrollment.EnrollmentNumber = EnrollNumber;
+        //    enrollment.DateCreated = DateTime.Now;
+        //    _context.Update(enrollment);
+        //    _context.SaveChanges();
+        //    SendEmail(enrollment.Email, enrollment.EnrollmentNumber, enrollment.EnrollerName);
+        //    //ViewBag.EnrollNumber = EnrollNumber;
+        //    string json = Newtonsoft.Json.JsonConvert.SerializeObject(enrollment.EnrollmentNumber);
+        //    //return Json(enrollment.EnrollmentNumber);
+        //    return json;
+
+        //}
+
         private string generateEnrollmentNumber()
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -162,7 +210,6 @@ namespace DAL
             var finalString = new String(stringChars);
             return finalString;
         }
-
         private void SendEmail(string emailId, string EnrollmentNumber, string name)
         {
             using (MailMessage mail = new MailMessage())
@@ -189,5 +236,19 @@ namespace DAL
             }
             
         }
+
+        //private void WriteToLogFile(string error)
+        //{
+        //    // Write only some strings in an array to a file.
+        //    // The using statement automatically flushes AND CLOSES the stream and calls 
+        //    // IDisposable.Dispose on the stream object.
+        //    // NOTE: do not use FileStream for text files because it writes bytes, but StreamWriter
+        //    // encodes the output as text.
+        //    using (System.IO.StreamWriter file =
+        //    new System.IO.StreamWriter(@"C:\Users\Vivek\Desktop\DotNet\Voter\VoterEnrollment\log\Errorlog.txt", true))
+        //    {
+        //        file.WriteLine(error);
+        //    }
+        //}
     }
 }

@@ -9,6 +9,12 @@ body {
     padding: 0px;
     color: #585b5c;
 }
+.channelFont{
+    font-size: 15px;
+    font-weight: bold;
+    color: whitesmoke; 
+    cursor: pointer;
+  }
 
 .heading {
     display: inline-block;

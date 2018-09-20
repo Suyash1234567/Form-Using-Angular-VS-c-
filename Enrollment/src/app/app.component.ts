@@ -36,7 +36,8 @@ export class AppComponent {
         console.log(result);
       }
     }, 
-    error => {console.error(error)});
+    error => { alert(error.message); console.error(error)});
+    // error => {console.error(error)});
   }
 
   GetCity(stateId) {
@@ -50,8 +51,7 @@ export class AppComponent {
         this.cities = result;
         console.log(result);
       }
-    }, error => console.error(error));
-
+    }, error => { alert(error.message); console.error(error)});
   }
 
   GetConstituency(cityId) {
@@ -68,7 +68,7 @@ export class AppComponent {
         this.constituencies = result;
         console.log(result);
       }
-    }, error => console.error(error));
+    }, error => { alert(error.message); console.error(error)});
 //     error => { $('#diverror').html=error.message; console.error(error)});  ---> To log error if you want to show them on ui
 // error => { alert(error.message); console.error(error)});
 
@@ -91,7 +91,7 @@ export class AppComponent {
     this.wards = result;
       console.log(result);
       }
-    }, error => console.error(error));
+    }, error => { alert(error.message); console.error(error)});
 
   }
 
@@ -114,7 +114,7 @@ export class AppComponent {
         //this.cities = result;
         console.log(result);
         alert("Data saved successfully!! Please check your email for enrollment number.");
-      }, error => console.error(error));
+      }, error => { alert(error.message); console.error(error)});
     }
     else {
       alert("Ensure all the fields are filled!");

@@ -1178,3 +1178,1286 @@ WHERE @@ROWCOUNT = 1 AND [EnrollmentId] = scope_identity();
 2018-09-20 12:40:18,803 [9] INFO  App  
  Request finished in 7525.8357ms 200 text/plain; charset=utf-8 
  
+2018-09-20 13:01:53,804 [10] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values   
+ 
+2018-09-20 13:01:53,804 [8] INFO  App  
+ Request starting HTTP/1.1 DEBUG http://localhost:54772/  0 
+ 
+2018-09-20 13:01:53,943 [8] INFO  App  
+ Request finished in 116.6728ms 200  
+ 
+2018-09-20 13:01:54,537 [10] INFO  App  
+ Request finished in 743.9721ms 404  
+ 
+2018-09-20 13:01:58,833 [8] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/getstates   
+ 
+2018-09-20 13:01:59,135 [8] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:01:59,658 [8] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:02:00,495 [8] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:02:01,038 [8] INFO  App  
+ Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:02:01,188 [8] DEBUG App  
+ test 
+ 
+2018-09-20 13:02:01,199 [8] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1531.7911ms. 
+ 
+2018-09-20 13:02:01,273 [8] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:02:01,539 [8] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 2284.6842ms 
+ 
+2018-09-20 13:02:01,674 [8] INFO  App  
+ Request finished in 2753.6521ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:02:01,690 [7] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/favicon.ico   
+ 
+2018-09-20 13:02:01,715 [7] INFO  App  
+ Request finished in 41.2025ms 404  
+ 
+2018-09-20 13:03:46,147 [10] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values   
+ 
+2018-09-20 13:03:46,147 [7] INFO  App  
+ Request starting HTTP/1.1 DEBUG http://localhost:54772/  0 
+ 
+2018-09-20 13:03:46,330 [7] INFO  App  
+ Request finished in 175.3916ms 200  
+ 
+2018-09-20 13:03:46,767 [10] INFO  App  
+ Request finished in 629.1114ms 404  
+ 
+2018-09-20 13:03:52,481 [8] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/getstates   
+ 
+2018-09-20 13:03:52,690 [8] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:03:53,162 [8] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:03:53,990 [8] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:03:54,553 [8] INFO  App  
+ Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:03:54,679 [8] DEBUG App  
+ test 
+ 
+2018-09-20 13:03:54,692 [8] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1519.1347ms. 
+ 
+2018-09-20 13:03:54,755 [8] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:03:54,927 [8] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 2191.3501ms 
+ 
+2018-09-20 13:03:55,214 [8] INFO  App  
+ Request finished in 2475.5966ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:03:55,304 [7] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/favicon.ico   
+ 
+2018-09-20 13:03:55,323 [7] INFO  App  
+ Request finished in 104.4862ms 404  
+ 
+2018-09-20 13:04:59,918 [8] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:05:00,562 [8] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:05:00,595 [8] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:05:00,893 [8] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:05:01,862 [8] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:05:02,449 [8] INFO  App  
+ Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:05:02,626 [8] DEBUG App  
+ test 
+ 
+2018-09-20 13:05:02,634 [8] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1734.3853ms. 
+ 
+2018-09-20 13:05:02,720 [8] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:05:02,893 [8] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 2321.0943ms 
+ 
+2018-09-20 13:05:02,910 [8] INFO  App  
+ Request finished in 2999.2771ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:05:37,387 [9] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetCity?StateId=1   
+ 
+2018-09-20 13:05:37,460 [9] INFO  App  
+ Route matched with {action = "GetCity", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) 
+ 
+2018-09-20 13:05:37,468 [9] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:05:37,594 [9] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) with arguments (1) - Validation state: Valid 
+ 
+2018-09-20 13:05:37,602 [9] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:05:37,679 [9] INFO  App  
+ Executed DbCommand (3ms) [Parameters=[@__StateId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [city].[CityId], [city].[CityName], [city].[StateId]
+FROM [City] AS [city]
+WHERE [city].[StateId] = @__StateId_0 
+ 
+2018-09-20 13:05:37,689 [9] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 92.43ms. 
+ 
+2018-09-20 13:05:37,691 [9] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.City, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:05:37,697 [9] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) in 230.1823ms 
+ 
+2018-09-20 13:05:37,699 [9] INFO  App  
+ Request finished in 312.1344ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:05:48,749 [8] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values   
+ 
+2018-09-20 13:05:48,868 [8] INFO  App  
+ Request finished in 74.6059ms 404  
+ 
+2018-09-20 13:06:02,688 [7] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:06:03,127 [7] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:06:03,147 [7] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:06:03,330 [7] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:06:03,823 [7] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:06:04,282 [7] INFO  App  
+ Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:06:04,390 [7] DEBUG App  
+ test 
+ 
+2018-09-20 13:06:04,398 [7] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1062.2453ms. 
+ 
+2018-09-20 13:06:04,455 [7] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:06:04,587 [7] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 1448.0384ms 
+ 
+2018-09-20 13:06:04,617 [7] INFO  App  
+ Request finished in 1932.5551ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:09:30,542 [19] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:09:30,549 [19] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:09:30,551 [19] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:09:30,554 [19] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:09:30,559 [19] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:09:30,585 [19] INFO  App  
+ Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:09:30,606 [19] DEBUG App  
+ test 
+ 
+2018-09-20 13:09:30,609 [19] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 52.6576ms. 
+ 
+2018-09-20 13:09:30,682 [19] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:09:30,684 [19] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 133.7861ms 
+ 
+2018-09-20 13:09:30,687 [19] INFO  App  
+ Request finished in 145.351ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:09:36,325 [19] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetCity?StateId=1   
+ 
+2018-09-20 13:09:36,373 [19] INFO  App  
+ Route matched with {action = "GetCity", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) 
+ 
+2018-09-20 13:09:36,375 [19] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:09:36,508 [19] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) with arguments (1) - Validation state: Valid 
+ 
+2018-09-20 13:09:36,514 [19] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:09:36,583 [19] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[@__StateId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [city].[CityId], [city].[CityName], [city].[StateId]
+FROM [City] AS [city]
+WHERE [city].[StateId] = @__StateId_0 
+ 
+2018-09-20 13:09:36,594 [19] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 83.2056ms. 
+ 
+2018-09-20 13:09:36,595 [19] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.City, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:09:36,601 [19] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) in 225.4286ms 
+ 
+2018-09-20 13:09:36,602 [19] INFO  App  
+ Request finished in 276.8841ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:09:38,735 [17] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetConstituency?cityId=1   
+ 
+2018-09-20 13:09:38,745 [17] INFO  App  
+ Route matched with {action = "GetConstituency", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment) 
+ 
+2018-09-20 13:09:38,748 [17] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:09:38,752 [17] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment) with arguments (1) - Validation state: Valid 
+ 
+2018-09-20 13:09:38,757 [17] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:09:38,775 [17] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[@__CityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [constituency].[ConstituencyId], [constituency].[CityId], [constituency].[ConstituencyName]
+FROM [Constituency] AS [constituency]
+WHERE [constituency].[CityId] = @__CityId_0 
+ 
+2018-09-20 13:09:38,788 [17] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 33.9401ms. 
+ 
+2018-09-20 13:09:38,790 [17] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.Constituency, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:09:38,801 [17] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment) in 52.7683ms 
+ 
+2018-09-20 13:09:38,803 [17] INFO  App  
+ Request finished in 68.4524ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:09:41,739 [17] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/getWard?constituencyId=1   
+ 
+2018-09-20 13:09:41,744 [17] INFO  App  
+ Route matched with {action = "GetWard", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment) 
+ 
+2018-09-20 13:09:41,746 [17] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:09:41,749 [17] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment) with arguments (1) - Validation state: Valid 
+ 
+2018-09-20 13:09:41,758 [17] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:09:41,778 [17] INFO  App  
+ Executed DbCommand (4ms) [Parameters=[@__constituencyId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [WardNo].[WardNumberId], [WardNo].[ConstituencyId], [WardNo].[WardNumber]
+FROM [WardNo] AS [WardNo]
+WHERE [WardNo].[ConstituencyId] = @__constituencyId_0 
+ 
+2018-09-20 13:09:41,799 [17] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 46.4082ms. 
+ 
+2018-09-20 13:09:41,801 [17] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.WardNo, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:09:41,809 [17] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment) in 63.3252ms 
+ 
+2018-09-20 13:09:41,811 [17] INFO  App  
+ Request finished in 72.3877ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:10:02,766 [17] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetEnrollmentNumber?StateId=1&CityId=1&ConstituencyId=1&WardNumberId=1&EnrollerName=,.mklhkpo&Email=suyashmehrotra85@gmail.com&DOB=2018-09-12&PhoneNumber=1234567890&FatherName=tdrfyguhjk   
+ 
+2018-09-20 13:10:02,786 [17] INFO  App  
+ Route matched with {action = "GetEnrollmentNumber", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetEnrollmentNumber (VoterEnrollment) 
+ 
+2018-09-20 13:10:02,788 [17] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:10:02,792 [17] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetEnrollmentNumber (VoterEnrollment) with arguments (1, 1, 1234567890, 1, 1, ,.mklhkpo, suyashmehrotra85@gmail.com, 9/12/2018 12:00:00 AM, tdrfyguhjk) - Validation state: Valid 
+ 
+2018-09-20 13:10:02,801 [17] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:10:03,063 [17] INFO  App  
+ Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [VoterEnrollment] ([CityId], [ConstituencyId], [DOB], [DateCreated], [Email], [EnrollerName], [EnrollmentNumber], [FatherName], [PhoneNumber], [StateId], [WardNumberId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [EnrollmentId]
+FROM [VoterEnrollment]
+WHERE @@ROWCOUNT = 1 AND [EnrollmentId] = scope_identity(); 
+ 
+2018-09-20 13:10:07,951 [17] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetEnrollmentNumber (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5156.9846ms. 
+ 
+2018-09-20 13:10:07,953 [17] INFO  App  
+ Executing ObjectResult, writing value of type 'System.String'. 
+ 
+2018-09-20 13:10:07,957 [17] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetEnrollmentNumber (VoterEnrollment) in 5168.6526ms 
+ 
+2018-09-20 13:10:07,959 [17] INFO  App  
+ Request finished in 5194.2755ms 200 text/plain; charset=utf-8 
+ 
+2018-09-20 13:21:50,921 [30] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:21:50,940 [30] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:21:50,942 [30] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:21:50,944 [30] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:21:50,946 [30] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:21:50,957 [30] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:21:50,958 [30] DEBUG App  
+ test 
+ 
+2018-09-20 13:21:50,960 [30] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.5426ms. 
+ 
+2018-09-20 13:21:50,961 [30] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:21:50,963 [30] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 20.7416ms 
+ 
+2018-09-20 13:21:50,964 [30] INFO  App  
+ Request finished in 43.4336ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:44:47,695 [32] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:44:47,727 [32] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:44:47,730 [32] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:44:47,732 [32] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:44:47,734 [32] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:44:47,756 [32] INFO  App  
+ Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:44:47,758 [32] DEBUG App  
+ test 
+ 
+2018-09-20 13:44:47,759 [32] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 25.2043ms. 
+ 
+2018-09-20 13:44:47,760 [32] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:44:47,763 [32] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 33.0428ms 
+ 
+2018-09-20 13:44:47,805 [32] INFO  App  
+ Request finished in 110.2439ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:44:57,725 [23] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:44:57,729 [23] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:44:57,731 [23] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:44:57,733 [23] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:44:57,735 [23] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:44:57,739 [23] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:44:57,741 [23] DEBUG App  
+ test 
+ 
+2018-09-20 13:44:57,742 [23] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.7447ms. 
+ 
+2018-09-20 13:44:57,743 [23] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:44:57,745 [23] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 13.8629ms 
+ 
+2018-09-20 13:44:57,746 [23] INFO  App  
+ Request finished in 21.3614ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:46:34,251 [25] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:46:34,253 [25] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:46:34,255 [25] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:46:34,257 [25] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:46:34,260 [25] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:46:34,267 [25] INFO  App  
+ Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:46:34,269 [25] DEBUG App  
+ test 
+ 
+2018-09-20 13:46:34,270 [25] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.336ms. 
+ 
+2018-09-20 13:46:34,272 [25] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:46:34,274 [25] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 18.3074ms 
+ 
+2018-09-20 13:46:34,275 [25] INFO  App  
+ Request finished in 24.6345ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:53:13,853 [24] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:53:13,856 [24] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:53:13,859 [24] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:53:13,861 [24] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:53:13,872 [24] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:53:13,893 [24] INFO  App  
+ Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:53:13,895 [24] DEBUG App  
+ test 
+ 
+2018-09-20 13:53:13,896 [24] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 24.7523ms. 
+ 
+2018-09-20 13:53:13,899 [24] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:53:13,965 [24] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 106.3363ms 
+ 
+2018-09-20 13:53:13,967 [24] INFO  App  
+ Request finished in 113.5991ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:53:22,854 [40] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:53:22,858 [40] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:53:22,859 [40] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:53:22,861 [40] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:53:22,865 [40] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:53:22,874 [40] INFO  App  
+ Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:53:22,876 [40] DEBUG App  
+ test 
+ 
+2018-09-20 13:53:22,877 [40] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.1093ms. 
+ 
+2018-09-20 13:53:22,878 [40] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:53:22,880 [40] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 20.7492ms 
+ 
+2018-09-20 13:53:22,881 [40] INFO  App  
+ Request finished in 26.8951ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:58:18,651 [43] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:58:18,653 [43] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:58:18,655 [43] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:58:18,659 [43] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:58:18,662 [43] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:58:18,668 [43] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:58:18,670 [43] DEBUG App  
+ test 
+ 
+2018-09-20 13:58:18,671 [43] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.9397ms. 
+ 
+2018-09-20 13:58:18,673 [43] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:58:18,674 [43] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 18.7103ms 
+ 
+2018-09-20 13:58:18,676 [43] INFO  App  
+ Request finished in 24.9325ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:58:37,301 [43] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:58:37,304 [43] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:58:37,306 [43] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:58:37,308 [43] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:58:37,311 [43] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:58:37,325 [43] INFO  App  
+ Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:58:37,327 [43] DEBUG App  
+ test 
+ 
+2018-09-20 13:58:37,328 [43] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 17.9192ms. 
+ 
+2018-09-20 13:58:37,330 [43] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:58:37,335 [43] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 28.5314ms 
+ 
+2018-09-20 13:58:37,337 [43] INFO  App  
+ Request finished in 35.8884ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:58:53,670 [50] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:58:53,672 [50] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:58:53,675 [50] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:58:53,677 [50] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:58:53,680 [50] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:58:53,690 [50] INFO  App  
+ Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:58:53,692 [50] DEBUG App  
+ test 
+ 
+2018-09-20 13:58:53,694 [50] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.8031ms. 
+ 
+2018-09-20 13:58:53,695 [50] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:58:53,696 [50] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 21.3301ms 
+ 
+2018-09-20 13:58:53,698 [50] INFO  App  
+ Request finished in 28.2337ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 13:59:14,544 [45] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 13:59:14,547 [45] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 13:59:14,550 [45] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 13:59:14,552 [45] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 13:59:14,557 [45] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 13:59:14,565 [45] INFO  App  
+ Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 13:59:14,567 [45] DEBUG App  
+ test 
+ 
+2018-09-20 13:59:14,568 [45] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12.2141ms. 
+ 
+2018-09-20 13:59:14,570 [45] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 13:59:14,573 [45] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 22.6715ms 
+ 
+2018-09-20 13:59:14,574 [45] INFO  App  
+ Request finished in 30.1066ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:01:06,791 [13] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:01:06,794 [13] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:01:06,796 [13] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:01:06,798 [13] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:01:06,801 [13] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:01:06,807 [13] INFO  App  
+ Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:01:06,808 [13] DEBUG App  
+ test 
+ 
+2018-09-20 14:01:06,810 [13] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.5658ms. 
+ 
+2018-09-20 14:01:06,813 [13] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:01:06,815 [13] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 19.4297ms 
+ 
+2018-09-20 14:01:06,818 [13] INFO  App  
+ Request finished in 27.6282ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:02:13,687 [10] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:02:13,690 [10] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:02:13,692 [10] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:02:13,696 [10] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:02:13,700 [10] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:02:13,707 [10] INFO  App  
+ Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:02:13,709 [10] DEBUG App  
+ test 
+ 
+2018-09-20 14:02:13,711 [10] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.9696ms. 
+ 
+2018-09-20 14:02:13,712 [10] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:02:13,714 [10] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 22.0437ms 
+ 
+2018-09-20 14:02:13,716 [10] INFO  App  
+ Request finished in 29.3908ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:12:01,106 [58] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:12:01,108 [58] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:12:01,110 [58] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:12:01,112 [58] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:12:01,121 [58] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:12:01,136 [58] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:12:01,137 [58] DEBUG App  
+ test 
+ 
+2018-09-20 14:12:01,139 [58] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.7799ms. 
+ 
+2018-09-20 14:12:01,140 [58] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:12:01,142 [58] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 31.9049ms 
+ 
+2018-09-20 14:12:01,144 [58] INFO  App  
+ Request finished in 38.211ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:12:05,991 [63] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:12:05,995 [63] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:12:05,997 [63] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:12:05,999 [63] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:12:06,002 [63] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:12:06,006 [63] INFO  App  
+ Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:12:06,007 [63] DEBUG App  
+ test 
+ 
+2018-09-20 14:12:06,009 [63] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.4114ms. 
+ 
+2018-09-20 14:12:06,010 [63] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:12:06,012 [63] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 15.6916ms 
+ 
+2018-09-20 14:12:06,014 [63] INFO  App  
+ Request finished in 22.4404ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:12:25,035 [63] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetCity?StateId=1   
+ 
+2018-09-20 14:12:25,038 [63] INFO  App  
+ Route matched with {action = "GetCity", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) 
+ 
+2018-09-20 14:12:25,040 [63] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:12:25,050 [63] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) with arguments (1) - Validation state: Valid 
+ 
+2018-09-20 14:12:25,053 [63] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:12:25,064 [63] INFO  App  
+ Executed DbCommand (4ms) [Parameters=[@__StateId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [city].[CityId], [city].[CityName], [city].[StateId]
+FROM [City] AS [city]
+WHERE [city].[StateId] = @__StateId_0 
+ 
+2018-09-20 14:12:25,066 [63] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.6247ms. 
+ 
+2018-09-20 14:12:25,067 [63] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.City, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:12:25,069 [63] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetCity (VoterEnrollment) in 29.0312ms 
+ 
+2018-09-20 14:12:25,071 [63] INFO  App  
+ Request finished in 35.4055ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:12:27,831 [60] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetConstituency?cityId=1   
+ 
+2018-09-20 14:12:27,836 [60] INFO  App  
+ Route matched with {action = "GetConstituency", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment) 
+ 
+2018-09-20 14:12:27,838 [60] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:12:27,841 [60] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment) with arguments (1) - Validation state: Valid 
+ 
+2018-09-20 14:12:27,846 [60] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:12:27,852 [60] INFO  App  
+ Executed DbCommand (3ms) [Parameters=[@__CityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [constituency].[ConstituencyId], [constituency].[CityId], [constituency].[ConstituencyName]
+FROM [Constituency] AS [constituency]
+WHERE [constituency].[CityId] = @__CityId_0 
+ 
+2018-09-20 14:12:27,854 [60] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.4221ms. 
+ 
+2018-09-20 14:12:27,855 [60] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.Constituency, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:12:27,857 [60] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetConstituency (VoterEnrollment) in 18.9888ms 
+ 
+2018-09-20 14:12:27,858 [60] INFO  App  
+ Request finished in 27.0901ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:12:31,839 [60] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/getWard?constituencyId=1   
+ 
+2018-09-20 14:12:31,844 [60] INFO  App  
+ Route matched with {action = "GetWard", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment) 
+ 
+2018-09-20 14:12:31,848 [60] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:12:31,852 [60] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment) with arguments (1) - Validation state: Valid 
+ 
+2018-09-20 14:12:31,855 [60] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:12:31,864 [60] INFO  App  
+ Executed DbCommand (6ms) [Parameters=[@__constituencyId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [WardNo].[WardNumberId], [WardNo].[ConstituencyId], [WardNo].[WardNumber]
+FROM [WardNo] AS [WardNo]
+WHERE [WardNo].[ConstituencyId] = @__constituencyId_0 
+ 
+2018-09-20 14:12:31,866 [60] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.7402ms. 
+ 
+2018-09-20 14:12:31,867 [60] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.WardNo, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:12:31,869 [60] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetWard (VoterEnrollment) in 20.6925ms 
+ 
+2018-09-20 14:12:31,870 [60] INFO  App  
+ Request finished in 31.2511ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:13:43,668 [66] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:13:43,670 [66] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:13:43,673 [66] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:13:43,675 [66] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:13:43,677 [66] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:13:43,713 [66] INFO  App  
+ Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:13:43,715 [66] DEBUG App  
+ test 
+ 
+2018-09-20 14:13:43,717 [66] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 40.1079ms. 
+ 
+2018-09-20 14:13:43,724 [66] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:13:43,727 [66] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 54.5015ms 
+ 
+2018-09-20 14:13:43,730 [66] INFO  App  
+ Request finished in 62.3381ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:13:46,686 [68] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:13:46,690 [68] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:13:46,692 [68] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:13:46,694 [68] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:13:46,700 [68] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:13:46,713 [68] INFO  App  
+ Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:13:46,714 [68] DEBUG App  
+ test 
+ 
+2018-09-20 14:13:46,716 [68] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.0437ms. 
+ 
+2018-09-20 14:13:46,717 [68] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:13:46,719 [68] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 26.6425ms 
+ 
+2018-09-20 14:13:46,720 [68] INFO  App  
+ Request finished in 33.7848ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:14:34,140 [66] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:14:34,144 [66] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:14:34,146 [66] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:14:34,148 [66] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:14:34,151 [66] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:14:34,165 [66] INFO  App  
+ Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:14:34,167 [66] DEBUG App  
+ test 
+ 
+2018-09-20 14:14:34,172 [66] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 22.3185ms. 
+ 
+2018-09-20 14:14:34,174 [66] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:14:34,176 [66] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 30.0588ms 
+ 
+2018-09-20 14:14:34,178 [66] INFO  App  
+ Request finished in 37.9651ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:15:25,281 [72] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:15:25,284 [72] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:15:25,286 [72] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:15:25,289 [72] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:15:25,292 [72] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:15:25,305 [72] INFO  App  
+ Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:15:25,307 [72] DEBUG App  
+ test 
+ 
+2018-09-20 14:15:25,309 [72] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 17.3194ms. 
+ 
+2018-09-20 14:15:25,311 [72] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:15:25,321 [72] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 35.1043ms 
+ 
+2018-09-20 14:15:25,324 [72] INFO  App  
+ Request finished in 42.7665ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:16:45,407 [65] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:16:45,410 [65] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:16:45,412 [65] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:16:45,414 [65] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:16:45,417 [65] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:16:45,467 [65] INFO  App  
+ Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:16:45,468 [65] DEBUG App  
+ test 
+ 
+2018-09-20 14:16:45,470 [65] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 53.381ms. 
+ 
+2018-09-20 14:16:45,471 [65] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:16:45,473 [65] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 61.0891ms 
+ 
+2018-09-20 14:16:45,475 [65] INFO  App  
+ Request finished in 67.9691ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:34:12,063 [53] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:34:12,086 [53] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:34:12,089 [53] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:34:12,091 [53] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:34:12,096 [53] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:34:12,220 [53] INFO  App  
+ Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:34:12,221 [53] DEBUG App  
+ test 
+ 
+2018-09-20 14:34:12,223 [53] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 128.9806ms. 
+ 
+2018-09-20 14:34:12,224 [53] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:34:12,226 [53] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 137.7379ms 
+ 
+2018-09-20 14:34:12,228 [53] INFO  App  
+ Request finished in 165.9806ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:34:32,534 [53] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:34:32,537 [53] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:34:32,539 [53] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:34:32,542 [53] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:34:32,546 [53] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:34:32,550 [53] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:34:32,552 [53] DEBUG App  
+ test 
+ 
+2018-09-20 14:34:32,554 [53] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.5778ms. 
+ 
+2018-09-20 14:34:32,555 [53] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:34:32,557 [53] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 17.8446ms 
+ 
+2018-09-20 14:34:32,558 [53] INFO  App  
+ Request finished in 24.6166ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:35:33,693 [68] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:35:33,696 [68] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:35:33,698 [68] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:35:33,699 [68] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:35:33,702 [68] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:35:33,712 [68] INFO  App  
+ Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:35:33,714 [68] DEBUG App  
+ test 
+ 
+2018-09-20 14:35:33,715 [68] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.0579ms. 
+ 
+2018-09-20 14:35:33,716 [68] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:35:33,718 [68] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 20.539ms 
+ 
+2018-09-20 14:35:33,719 [68] INFO  App  
+ Request finished in 26.7759ms 200 application/json; charset=utf-8 
+ 
+2018-09-20 14:35:42,336 [63] INFO  App  
+ Request starting HTTP/1.1 GET http://localhost:54772/api/values/GetStates   
+ 
+2018-09-20 14:35:42,338 [63] INFO  App  
+ Route matched with {action = "GetStates", controller = "Values"}. Executing action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) 
+ 
+2018-09-20 14:35:42,340 [63] INFO  App  
+ Policy execution successful. 
+ 
+2018-09-20 14:35:42,342 [63] INFO  App  
+ Executing action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) - Validation state: Valid 
+ 
+2018-09-20 14:35:42,345 [63] INFO  App  
+ Entity Framework Core 2.1.3-rtm-32065 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+ 
+2018-09-20 14:35:42,350 [63] INFO  App  
+ Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [state].[StateId], [state].[StateName]
+FROM [States] AS [state] 
+ 
+2018-09-20 14:35:42,351 [63] DEBUG App  
+ test 
+ 
+2018-09-20 14:35:42,353 [63] INFO  App  
+ Executed action method VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.2123ms. 
+ 
+2018-09-20 14:35:42,354 [63] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DBTable.Models.States, DBTable.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2018-09-20 14:35:42,357 [63] INFO  App  
+ Executed action VoterEnrollment.Controllers.ValuesController.GetStates (VoterEnrollment) in 16.3886ms 
+ 
+2018-09-20 14:35:42,359 [63] INFO  App  
+ Request finished in 22.9593ms 200 application/json; charset=utf-8 
+ 
