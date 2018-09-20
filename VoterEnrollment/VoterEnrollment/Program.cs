@@ -26,7 +26,7 @@ namespace VoterEnrollment
             var repo = log4net.LogManager.CreateRepository(Assembly.GetEntryAssembly(),
                        typeof(log4net.Repository.Hierarchy.Hierarchy));
             log4net.Config.XmlConfigurator.Configure(repo, log4netConfig["log4net"]);
-            log.Info("Application - Main is invoked");
+            //log.Info("Application - Main is invoked");
 
             CreateWebHostBuilder(args).Build().Run();
         }
